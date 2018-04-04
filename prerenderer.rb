@@ -7,5 +7,8 @@ class Prerenderer < Sinatra::Base
    id =  @params['id']
    send_file("public/#{id}.html")
  end
+ get '/parts' do
+   send_file("public/catalog.html")
+ end
   run! if app_file == $0
 end
